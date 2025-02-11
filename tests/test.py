@@ -15,6 +15,13 @@ class BasicTests(unittest.TestCase):
         # Verifica que la respuesta sea "Hello, World!"
         self.assertEqual(result.status_code, 200)
         self.assertEqual(result.data.decode(), "Esto es un test")
+        def test_ropa(self):
+        # Envía una solicitud GET a la ruta '/'
+        result = self.app.get('/ropa')
+        
+        # Verifica que la respuesta sea "Hello, World!"
+        self.assertEqual(result.status_code, 200)
+        self.assertEqual(result.data.decode(), "Esto es una ropa")
 
 
 if __name__ == "__main__":
