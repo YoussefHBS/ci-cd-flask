@@ -1,6 +1,6 @@
 # ci-cd-flask
 
-## Creamos un virtualenv en Python
+## Creamos un entorno virtual en Python
 
 ```
 python3 -m venv venv
