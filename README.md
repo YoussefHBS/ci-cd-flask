@@ -1,54 +1,43 @@
 # ci-cd-flask
 
-Este repositorio contiene los archivos necesarios para realizar una práctica de
-**introducción a CI/CD** para una aplicación [Flask][1].
+## Creamos un virtualenv en Python
 
-En esta práctica vamos a realizar las siguientes tareas.
-
-- **Intregración Continua (CI) con GitHub Actions**. Vamos a automatizar la ejecución de
-  tests unitarios cada vez que se haga un _push_ a la rama `main`.
-- **Entrega Continua (CD)**. Vamos a automatizar la creación y publicación de
-  una imagen Docker en Docker Hub cuando se pasen los test unitarios.
-- **Despliegue Continuo (CD)**. Vamos a automatizar el despliegue de la imagen
-  Docker en AWS.
-
-## Cómo crear un virtualenv en Python
-
-Creamos el entorno virtual.
-
-```bash
+```
 python3 -m venv venv
 ```
 
-Activamos el entorno virtual.
+Lo activamos.
 
-```bash
+```
 source venv/bin/activate
 ```
+Asi tiene que aparecer
 
-Instalamos las dependencias.
+![alt text](img/image1.png)
 
-```bash
+Instalamos las dependencias que estas en `requirements.txt`.
+
+```
 pip install -r requirements.txt
 ```
+Asi tiene que aparecer
 
-Para desactivar el entorno virtual.
+![alt text](img/image2.png)
 
-```bash
+Para desactivar el entorno.
+
+```
 deactivate
 ```
 
-## Cómo ejecutar los tests
+## Hacemos el Test
 
-Para realizar los tests vamos a utilizar `unittest`, que es el framework de
-pruebas unitarias que viene integrado en Python.
+En nuestro repositorio de `GitHub`, en la opción actions, le damos en `New workflow` para hacer el test.
 
-Desde la raíz del proyecto, ejecutamos el siguiente comando.
+![alt text](img/image3.png)
 
-```bash
-python3 -m unittest tests/*.py
-```
 
-Este comando ejecutará todos los tests que se encuentren en la carpeta `tests`.
+### build 
+Y asi debería de salir  con el check en verde para tenerlo bien.
 
-[1]: https://flask.palletsprojects.com/en/stable/
+![alt text](img/image.png)
